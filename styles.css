@@ -3,6 +3,11 @@ body {
   font-family: 'Exo', sans-serif;
   background-color: #F1F1F1;
   color: #000000;
+  max-width: 100vw;
+}
+
+#gallery-wrapper {
+  background-color: #333333
 }
 
 header {
@@ -17,6 +22,7 @@ header {
   position: sticky;
   top: 0;
   width: 90%;
+  box-shadow: inset 0 2px 6px #647686, inset 0 -2px 6px #647686;
 }
 
 #header-logo {
@@ -73,6 +79,11 @@ h1 {
   justify-content: center;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 ul {
   margin: 0;
   list-style: none;
@@ -81,7 +92,9 @@ ul {
   justify-content: space-between;
 }
 
-li {
+ul a {
+  color: white;
+  text-decoration: none;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -94,15 +107,15 @@ li {
   padding-right: 10px;
 }
 
-li:first-child {
+ul a:first-child {
   border-left: none;
 }
 
-li:last-child {
+ul a:last-child {
   border-right: none;
 }
 
-ul li:hover {
+ul a:hover {
   background-color: #d7dadb;
   color: #2c3e50;
   cursor: pointer;
@@ -151,10 +164,10 @@ footer p {
   color: white;
   position: absolute;
   background: #2c3e50;
-  width: 200px;
+  width: 350px;
   height: 300px;
-  top: 40px;
-  right: 50%;
+  top: 48px;
+  right: -30px;
   border: 1px solid #C4B9B9;
   border-radius: 5px;
   flex-direction: column;
@@ -168,16 +181,7 @@ footer p {
 #menu-nav-button span {
   width: 35px;
   height: 2px;
-  background-color: white;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #2c3e50;
+  background-color: #B1B1B1;
 }
 
 #gallery {
@@ -189,34 +193,13 @@ a:hover {
 }
 
 .gallery-img {
-  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px auto;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 500px;
 }
-
-@media (max-width: 750px) {
-  ul {
-    display: none;
-  }
-
-  #menu-nav-button {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-  }
-
-  #logo {
-    font-size: 15vw;
-  }
-}
-
-@media (max-width: 1077px) {
-  .gallery-img {
-    width: 100%;
-    max-width: 700px;
-  }
-}
-
-
 
 /* lightbox */
 
@@ -234,6 +217,52 @@ a:hover {
 
 #overlay img {
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 90%;
   max-height: 80%;
 }
+
+/* Shows page */
+table {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+td {
+  border-bottom: 1px solid black;
+  height: 2em;
+}
+
+
+@media (max-width: 750px) {
+  ul {
+    display: none;
+  }
+
+  #menu-nav-button {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+
+  #logo {
+    font-size: 15vw;
+  }
+
+  table {
+    width: 100%;
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 1077px) {
+  .gallery-img {
+    width: 90%;
+    max-width: 700px;
+  }
+
+}
+
+
+

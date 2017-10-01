@@ -8,3 +8,7 @@ menuButton.addEventListener("click", function(){
     nav.setAttribute("id", "menu-nav-hidden");
   }
 })
+
+nav.addEventListener("mouseleave", function(){
+  nav.setAttribute("id", "menu-nav-hidden");
+})
