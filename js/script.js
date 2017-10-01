@@ -12,3 +12,9 @@ menuButton.addEventListener("click", function(){
 nav.addEventListener("mouseleave", function(){
   nav.setAttribute("id", "menu-nav-hidden");
 })
+
+
+
+// messing around with fade in on page load
+
+$("#logo").fadeIn(2500);
