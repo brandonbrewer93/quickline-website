@@ -19,7 +19,7 @@ Experiments
 
 
 body {
-  color: #000000;
+  color: #000;
   margin: 0;
   height: 100%;
   background-image: url('img/esc.png');
@@ -55,8 +55,8 @@ nav {
 
 .header-nav {
   padding-left: 0;
-  font-family: 'Megrim', cursive;
   font-size: 2em;
+  font-weight: bold;
   position: absolute;
   text-align: center;
   float: left;
@@ -76,6 +76,7 @@ nav {
 .nav-li:hover {
   font-weight: bold;
   cursor: pointer;
+  text-shadow: 2px 1px #6E6E6E;
 }
 
 .mobile-nav {
@@ -124,6 +125,7 @@ Main Content
 .container {
   width: 100%;
   height: 100vh;
+  border: 1px solid red;
 }
 
 .landing {
@@ -166,6 +168,7 @@ Main Content
  ***************/
 
 footer {
+  color: white;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -229,6 +232,10 @@ Media Queries
 
   .shows table {
     font-size: 1.3em;
+  }
+
+  .pictures {
+    height: 100%;
   }
 
   .soc-media-icon {
