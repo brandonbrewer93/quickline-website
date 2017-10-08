@@ -21,8 +21,9 @@ mobileNav.mouseleave(function() {
   button.show();
 })
 
-var width = $(window).width();
 
-if (width > 700) {
-  mobileNav.css("display", "none");
-}
+// Parallax effect.
+
+
+$('.landing').parallax({imageSrc: 'img/concert.jpeg'});
+$('.shows').parallax({imageSrc: 'img/mic.jpg'});
