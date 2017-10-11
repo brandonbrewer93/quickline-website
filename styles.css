@@ -19,7 +19,7 @@ Experiments
 
 
 body {
-  color: #000;
+  color: #FFFFFF;
   margin: 0;
   height: 100%;
   background-image: url('img/esc.png');
@@ -56,7 +56,6 @@ nav {
 .header-nav {
   padding-left: 0;
   font-size: 2em;
-  font-weight: bold;
   position: absolute;
   text-align: center;
   float: left;
@@ -69,14 +68,15 @@ nav {
 .nav-li {
   list-style: none;
   line-height: 2em;
-  display: inline;
+  display: inline-block;
   padding: 0 20px;
+  transition: all 0.2s ease-in 0s;
 }
 
 .nav-li:hover {
   font-weight: bold;
   cursor: pointer;
-  text-shadow: 2px 1px #6E6E6E;
+  transform: scale(1.2);
 }
 
 .mobile-nav {
@@ -86,8 +86,7 @@ nav {
   margin-top: 0;
   padding: 0;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  position: absolute;
+  background-color: rgba(0, 0, 0, .7);
 }
 
 .mobile-nav li {
@@ -95,6 +94,10 @@ nav {
   width: 100%;
   padding-left: 0;
   color: #A3A1A1;
+}
+
+.mobile-nav li:hover {
+  transform: none;
 }
 
 .nav-button:first-of-type {
@@ -106,21 +109,13 @@ nav {
   margin: 6px auto;
   height: 2px;
   width: 40px;
-  background-color: #000000;
+  background-color: #FFFFFF;
 }
 
 
  /***************
 Main Content
  ***************/
-
-.logo {
-  display: none;
-  text-align: center;
-  font-family: 'Megrim', cursive;
-  font-size: 100px;
-  cursor: default;
-}
 
 .container {
   width: 100%;
@@ -134,7 +129,33 @@ Main Content
   justify-content: space-around;
 }
 
+.logo {
+  width: 100%;
+  margin-top: 20%;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+  font-size: 10em;
+  cursor: default;
+}
+
+.scroll-arrow {
+  margin: 0 auto; 
+  width: 50px;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+}
+
+.scroll-arrow:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+.about { 
+  height: 800px;
+}
+
 .shows {
+  height: 100%;
   color: white;
   display: flex;
   flex-direction: column;
@@ -149,12 +170,103 @@ Main Content
 }
 
 .shows table {
-  margin-left: 20px;
+  margin: 100px 0 100px 25px;
   text-align: center;
   width: 65%;
   font-size: 2em;
   line-height: 1em;
 }
+
+.pictures {
+  height: 100%;
+}
+
+.contact {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#soc-media-nav {
+  margin-top: 20px;
+}
+
+.soc-media-icon {
+  width: 40px;
+  transition: all 0.3s ease 0s;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.soc-media-icon:hover {
+  transform: scale(1.3);
+}
+
+#facebook-button:hover {
+  background-color: #3B5998;
+}
+
+#twitter-button:hover {
+  background-color: #1DA1F2;
+}
+
+#instagram-button:hover {
+  background-color: #bc2a8d;
+}
+
+.contact-wrapper {
+  height: 500px;
+}
+
+.contact input{
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  color: black;
+  display: block;
+  margin: 10px auto;
+  width: 400px;
+  height: 40px;
+  border: none;
+}
+
+.contact input:focus {
+  outline: none;
+}
+
+.contact button {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 2em;
+  color: black;
+  display: block;
+  margin: 10px auto;
+  width: 400px;
+  height: 40px;  
+  border: none;
+  background-color: #57DBAF;
+  animation-duration: .7s;
+}
+
+.contact button:focus {
+  outline: none;
+}
+
+/***
+Validation Classes
+***/
+
+.valid {
+  background-color: #00B7FF;
+}
+
+.invalid {
+  background-color: #C77373
+}
+
 
  /***************
  Footer
@@ -170,20 +282,6 @@ footer {
   justify-content: space-around;
 }
 
-#soc-media-nav {
-  margin-top: 20px;
-  position: absolute;
-  left: 0;
-}
-
-.soc-media-icon {
-  width: 40px;
-}
-
-.soc-media-icon:hover {
-  width: 50px;
-}
-
 footer p {
   display: flex;
   flex-direction: column;
@@ -194,6 +292,8 @@ footer p {
  /***************
 Media Queries
  ***************/
+
+
 
 @media (max-width: 700px) {
   
@@ -212,31 +312,53 @@ Media Queries
   }
 
   .logo {
-    font-size: 40px;
-    margin-top: 40vh;
-    margin-bottom: 40vh;
+    font-size: 5em;
+    margin-top: 30vh;
+    margin-bottom: 30vh;
     padding: 0;
     cursor: default;
   }
 
   .shows {
-    background-position: 75%;
+    background-image: url('img/mic2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
   }
 
   .shows table {
     font-size: 1.3em;
+    margin: 100px auto;
   }
 
-  .pictures {
-    height: 100%;
+  .shows caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 20px;
   }
 
-  .soc-media-icon {
-    display: none;
+  .shows table {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 20px;
+  }
+
+  .contact input, 
+  .contact button {
+    width: 300px;
+  }
+
+  .contact p {
+    margin-right: 10px;
+    margin-left: 10px;
   }
 }
 
-@media (max-width: 1000px) {
-
-
+@media (max-width: 380px) {
+  .logo {
+    font-size: 3em;
+  }
 }

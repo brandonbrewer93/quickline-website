@@ -4,23 +4,24 @@
   <title>Quickline</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Megrim|Poiret+One" rel="stylesheet"> 
   <link type="text/css" rel="stylesheet" href="styles.css">
+  <link type="text/css" rel="stylesheet" href="animate.css">
 </head>
 <body>
   <header>
     <nav>
       <ul class="header-nav">
-        <a href="index.html"><li class="nav-li">Home</li></a>
-        <a href="shows.html"><li class="nav-li">Shows</li></a>
-        <li class="nav-li">Pictures</li>
-        <li class="nav-li">contact</li>
+        <li class="nav-li about-button">About Us</li>
+        <li class="nav-li shows-button">Shows</li>
+        <li class="nav-li pictures-button">Pictures</li>
+        <li class="nav-li contact-button">Contact</li>
       </ul>
       <ul class="mobile-nav">
-        <a href="index.html"><li class="nav-li">Home</li></a>
-        <a href="shows.html"><li class="nav-li">Shows</li></a>
-        <li class="nav-li">Pictures</li>
-        <li class="nav-li">contact</li>
+        <li class="nav-li about-button">About Us</li>
+        <li class="nav-li shows-button">Shows</li>
+        <li class="nav-li pictures-button">Pictures</li>
+        <li class="nav-li contact-button">Contact</li>
       </ul>
       <div>
         <span class="nav-button"></span>
@@ -32,15 +33,16 @@
 
   <div class="container landing">
     <h1 class="logo">Quickline</h1>
+    <img class="scroll-arrow" id="scroll-arrow" src="img/down_arrow.png">
   </div>
 
-  <div class="container home">
+  <div class="container about" id="about">
 
   </div>
 
-  <div class="container shows">
-    <h3>Upcoming Shows</h3>
+  <div class="container shows" id="shows">
     <table>
+      <caption>Upcoming Shows</caption>
       <thead>
           <tr>
             <td>Date</td>
@@ -84,22 +86,26 @@
     </table>
   </div>
 
-  <div class="container pictures">
+  <div class="container pictures" id="pictures">
     
   </div>
 
-  <div class="container contact">
-    
+  <div class="container contact" id="contact">
+    <div id="contact-wrapper">
+      <h3>Contact us on Facebook, Twitter and Instagram</h3>
+      <div id="soc-media-nav">
+        <a href="https://facebook.com"><img id="facebook-button"src="img/facebook_gray.png" class="soc-media-icon"></a>
+        <a href="https://twitter.com"><img id="twitter-button" src="img/twitter_gray.png" class="soc-media-icon"></a>
+        <a href="https://instagram.com"><img id="instagram-button" src="img/instagram_gray.png" class="soc-media-icon"></a>
+      </div>
+      <p>Stay up to date on our latest shows by signing up for our newsletter</p>
+      <input type="email" id="email"placeholder="Email Address">
+      <button id="newsletter-submit">Submit</button>
+    </div>
   </div>
   
 
   <footer>
-    <div id="soc-media-nav">
-      <img src="img/facebook.png" class="soc-media-icon">
-      <img src="img/twitter.png" class="soc-media-icon">
-      <img src="img/instagram.png" class="soc-media-icon">
-    </div>
-
     <p>&copy Quickline 2017</p>
   </footer>
 
