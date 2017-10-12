@@ -29,6 +29,7 @@ body {
   justify-content: space-between;
   position: relative;
   font-family: 'Megrim', cursive;
+  
 }
 
 a,
@@ -170,11 +171,34 @@ Main Content
 }
 
 .shows table {
-  margin: 100px 0 100px 25px;
+  color: white;
+  font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;
-  width: 65%;
+  width: 100%;
   font-size: 2em;
   line-height: 1em;
+  border-collapse: collapse;
+  margin: 20px 0;
+  padding-bottom: 25px;
+}
+
+.shows caption {
+  line-height: 70px;
+}
+
+.shows caption,
+.shows th,
+.shows tr {
+  border-bottom: 2px solid #575757;
+  background-color: rgba(209, 207, 207, 0.7);
+}
+
+.shows td {
+  width: 50%;
+}
+
+.shows tr:nth-child(even) {
+  background-color: rgba(105, 104, 104, 0.7);
 }
 
 .pictures {
@@ -182,7 +206,6 @@ Main Content
 }
 
 .contact {
-  color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -319,31 +342,8 @@ Media Queries
     cursor: default;
   }
 
-  .shows {
-    background-image: url('img/mic2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  }
-
   .shows table {
     font-size: 1.3em;
-    margin: 100px auto;
-  }
-
-  .shows caption {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding-top: 20px;
-  }
-
-  .shows table {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding-bottom: 20px;
   }
 
   .contact input, 

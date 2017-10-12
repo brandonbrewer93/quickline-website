@@ -56,7 +56,7 @@ mobileNav.mouseleave(function() {
 // Parallax effect.
 
 $('.landing').parallax({imageSrc: 'img/concert3.jpeg'});
-$('.shows').parallax({imageSrc: 'img/mic.jpg'});
+$('.shows').parallax({imageSrc: 'img/mic3.jpg'});
 $('.about').parallax({imageSrc: 'img/record.jpeg'});
 
 //Email validation
