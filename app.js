@@ -58,6 +58,8 @@ mobileNav.mouseleave(function() {
 $('.landing').parallax({imageSrc: 'img/concert3.jpeg'});
 $('.shows').parallax({imageSrc: 'img/mic3.jpg'});
 $('.about').parallax({imageSrc: 'img/record.jpeg'});
+$('.pictures').parallax({imageSrc: 'img/blured.jpg'});
+
 
 //Email validation
 
