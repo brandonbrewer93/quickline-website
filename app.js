@@ -7,8 +7,8 @@ const footer = $("footer");
 
 //Fade in content.
 
-logo.addClass('animated flipInX').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-  $(this).removeClass('animated flipInX');
+logo.addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+  $(this).removeClass('animated fadeInUp');
 });
 
 nav.show(2000);
@@ -88,11 +88,22 @@ function validate() {
 
 $("#newsletter-submit").bind("click", validate);
 
-$("#newsletter-submit").click(function() {
-  console.log('clicked');
-  if ($('#email').attr('class') == 'invalid') {
-    console.log('invalid');
-  } else if ($('#email').attr('class') == 'valid') {
-    console.log('valid')
-  }
-});
+
+
+
+
+
+
+
+
+
+// Debugging
+
+// $("#newsletter-submit").click(function() {
+//   console.log('clicked');
+//   if ($('#email').attr('class') == 'invalid') {
+//     console.log('invalid');
+//   } else if ($('#email').attr('class') == 'valid') {
+//     console.log('valid')
+//   }
+// });
