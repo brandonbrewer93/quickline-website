@@ -1,35 +1,16 @@
-/* 
-Experiments
-*/
- header div {
-   width: 40px;
-   margin: 0 auto;
-   position: absolute;
-   left: 50%;
-   -webkit-transform: translateX(-50%);
-   transform: translateX(-50%);
- }
-
-/* 
-Experiments
-*/
-
-
-
-
-
 body {
   color: #FFFFFF;
   margin: 0;
   height: 100%;
   background-image: url('img/esc.png');
   background-position: cover;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   font-family: 'Megrim', cursive;
-  
+  overflow-x: hidden;
 }
 
 a,
@@ -78,6 +59,19 @@ nav {
   font-weight: bold;
   cursor: pointer;
   transform: scale(1.2);
+}
+
+.mobile-nav-button {
+  width: 40px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.mobile-nav-button:hover {
+  cursor: pointer;
 }
 
 .mobile-nav {
@@ -165,41 +159,43 @@ Main Content
   background: transparent;
 }
 
-.shows h3 {
-  margin: 0;
-  text-align: center;
-  font-size: 3em;
-}
-
 .shows table {
-  color: white;
+  color: black;
   font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;
   width: 100%;
   font-size: 2em;
   line-height: 1em;
   border-collapse: collapse;
-  margin: 20px 0;
+  margin: 0;
   padding-bottom: 25px;
 }
 
-.shows caption {
-  line-height: 70px;
-}
-
-.shows caption,
 .shows th,
 .shows tr {
   border-bottom: 2px solid #575757;
-  background-color: rgba(209, 207, 207, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .shows td {
-  width: 50%;
+  width: 30%;
+}
+
+.shows button {
+  color: white;
+  background-color: #353535;
+  border: none;
+  height: 100%;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+.shows button:hover {
+  cursor: pointer;
 }
 
 .shows tr:nth-child(even) {
-  background-color: rgba(105, 104, 104, 0.7);
+  background-color: rgba(202, 202, 202, 0.7);
 }
 
 .pictures {

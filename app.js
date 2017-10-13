@@ -1,14 +1,14 @@
 const logo = $(".logo");
 const nav = $("nav");
-const mobileButton = $("header div");
+const mobileButton = $(".mobile-nav-button");
 const menu = $(".header-nav");
 const mobileNav = $(".mobile-nav")
 const footer = $("footer");
 
 //Fade in content.
 
-logo.addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-  $(this).removeClass('animated fadeInUp');
+logo.addClass('animated flipInX').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+  $(this).removeClass('animated flipInX');
 });
 
 nav.show(2000);
