@@ -201,14 +201,12 @@ Main Content
 .pictures {
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
 }
 
 .fotorama {
-  width: 80%;
-  margin: auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 
