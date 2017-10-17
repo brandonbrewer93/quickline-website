@@ -2,7 +2,7 @@ const logo = $(".logo");
 const nav = $("nav");
 const mobileButton = $(".mobile-nav-button");
 const menu = $(".header-nav");
-const mobileNav = $(".mobile-nav")
+const mobileNav = $(".mobile-nav");
 const footer = $("footer");
 
 //Fade in content.
@@ -14,30 +14,22 @@ logo.addClass('animated flipInX').one('webkitAnimationEnd mozAnimationEnd MSAnim
 nav.show(2000);
 
 
-//Scroll to corresponding div when nav buttons are clicked and animate the logo.
+// Scroll to corresponding div when nav buttons are clicked and animate the logo.
 
-const buttons = [
-  ['.about-button', '#about'],
-  ['.shows-button', '#shows'],
-  ['.pictures-button', '#pictures'],
-  ['.contact-button', '#contact'],
-  ['#scroll-arrow', '#about']
-]
+var links = $('.nav-li');
+links.push($('#scroll-arrow'));
 
-function scroll(button, div) {
-  $(button).click(function () {
+$.each(links, function(i, btn){
+  $(this).click(function () {
+    const target = $(this).attr('data-link');
     $('html, body').animate({
-      scrollTop: $(div).offset().top
+      scrollTop: $(target).offset().top
     }, 1000);
     logo.addClass('animated fadeOutDownBig').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       $(this).removeClass('animated fadeOutDownBig');
     });
   });
-}
-
-for (let i = 0; i < buttons.length; i++) {
-  scroll(buttons[i][0], buttons[i][1])
-}
+});
 
 
 // Mobile navigation.
