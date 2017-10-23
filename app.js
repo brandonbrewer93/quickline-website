@@ -99,3 +99,18 @@ $("#newsletter-submit").bind("click", validate);
 //     console.log('valid')
 //   }
 // });
+
+
+var aboutNav = $('.about-nav span'); 
+
+$.each(aboutNav, function(i, btn) {
+  $(btn).click(function(){
+    console.log($(this).attr('data-link'));
+    const target = $(this).attr('data-link');
+    $('.scroller').animate({
+      scrollLeft: ($(target).offset().left)
+    }, 500);
+    console.log($(target).offset().left);
+    console.log($('.scroller').scrollLeft());
+  })
+})
