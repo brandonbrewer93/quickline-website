@@ -1,0 +1,113 @@
+body {
+  background: #5F5F5F;
+}
+
+.pagebreak {
+  height: 200px;
+  background-color: #BBBBBB;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.navbar-toggler {
+  font-size: 1em;
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.nav-link {
+  font-size: 1.3em;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+section {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+}
+
+#landing {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  background-image: url('../img/concert3.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#about {
+  background-image: url('../img/record.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#shows {
+  background-image: url('../img/mic3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#pictures {
+  background-image: url('../img/blured.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#contact {
+  background-image: url('../img/esc.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+#landing-logo {
+  width: 100%;
+  color: white;
+  margin-top: 200px;
+  font-size: 10em;
+}
+
+#scroll-arrow {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.card {
+  height: 500px;
+}
+
+@media (max-width: 768px) {
+  #landing-logo {
+    font-size: 6em;
+  }
+
+  #scroll-arrow {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  #landing-logo {
+    font-size: 4em;
+  }
+
+  #scroll-arrow {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,138 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Quickline</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quickline</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
   <link href="https://fonts.googleapis.com/css?family=Megrim|Poiret+One|Open+Sans+Condensed:300" rel="stylesheet">
-  <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="styles.css">
-  <link type="text/css" rel="stylesheet" href="animate.css">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <ul class="header-nav">
-        <li class="nav-li about-button" data-link=".about">About Us</li>
-        <li class="nav-li shows-button" data-link=".shows">Shows</li>
-        <li class="nav-li pictures-button" data-link=".pictures">Pictures</li>
-        <li class="nav-li contact-button" data-link=".contact">Contact</li>
-      </ul>
-      <ul class="mobile-nav">
-        <li class="nav-li about-button">About Us</li>
-        <li class="nav-li shows-button">Shows</li>
-        <li class="nav-li pictures-button">Pictures</li>
-        <li class="nav-li contact-button">Contact</li>
-      </ul>
-      <div class="mobile-nav-button">
-        <span class="nav-button"></span>
-        <span class="nav-button"></span>
-        <span class="nav-button"></span>
-      </div>
-    </nav>
-  </header>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark justify-content-around">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#shows">Shows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pictures">Pictures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-  <div class="container landing">
-    <h1 class="logo">Quickline</h1>
-    <img class="scroll-arrow" id="scroll-arrow" src="img/down_arrow.png " data-link="#about">
-  </div>
+      <section id="landing">
+              <h1 id="landing-logo" class="text-center">Quickline</h1>
+              <img id="scroll-arrow" src="img/down_arrow.png">
+      </section>
 
-  <div class="container about">
-    <q>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</q>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, expedita reprehenderit aspernatur ducimus deserunt asperiores natus eligendi molestias, impedit, architecto quas ipsum voluptatum minus odit rem hic officiis corrupti distinctio quis. Alias quo ullam magni, dolore suscipit incidunt cum maxime, blanditiis ducimus repellat harum nihil beatae necessitatibus fuga! Mollitia id pariatur numquam, minus veniam, atque consequuntur quas quis ratione earum non. Neque a, ullam consequatur labore et fugiat maiores quibusdam explicabo laboriosam ea, dolorem tempore voluptas? Quos consequatur cum repellendus! Harum distinctio veniam mollitia earum exercitationem doloremque, omnis, numquam quod accusantium pariatur odit fugit nesciunt amet beatae. Ducimus, officiis libero!</p>
-  </div>
-    
-    
-  </div>
+      <div class="pagebreak"></div>
 
-  <div class="container shows">
-    <table>
-      <thead>
-        <th colspan="3">Upcoming</td>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Friday 1-01-2018</td>
-          <td>Gerstles</td>
-          <td><button>Tickets</button></td>
-        </tr>
-        <tr>
-          <td>Friday 1-01-2018</td>
-          <td>Gerstles</td>
-          <td><button>Tickets</button></td>
-        </tr>
-        <tr>
-          <td>Friday 1-01-2018</td>
-          <td>Gerstles</td>
-          <td><button>Tickets</button></td>
-        </tr>
-        <tr>
-          <td>Friday 1-01-2018</td>
-          <td>Gerstles</td>
-          <td><button>Tickets</button></td>
-        </tr>
-        <tr>
-          <td>Friday 1-01-2018</td>
-          <td>Gerstles</td>
-          <td><button>Tickets</button></td>
-        </tr>
-        <tr>
-          <td>Friday 1-01-2018</td>
-          <td>Gerstles</td>
-          <td><button>Tickets</button></td>
-        </tr>
-        <tr>
-          <td>Friday 1-01-2018</td>
-          <td>Gerstles</td>
-          <td><button>Tickets</button></td>
-        </tr>
-        <tr>
-          <td>Friday 1-01-2018</td>
-          <td>Gerstles</td>
-          <td><button>Tickets</button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+      <section id="about">
+        <div class="container">
+          <div class="row h-100 align-items-center">
+            <div class="col-md-3">
+              <div class="card text-left">
+                  <div class="card-header">
+                    Setlist
+                  </div>
+                  <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                    </blockquote>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-center">
+                    <div class="card-header">
+                      About The Band
+                    </div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                      </blockquote>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="card text-right">
+                      <div class="card-header">
+                        Members
+                      </div>
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+      </section>
 
-  <div class="container pictures">
-      <div class="fotorama" data-keyboard="true" data-nav="thumbs" data-autoplay="true" data-loop="true" data-transition="dissolve">
-          <img src="img/band_img/img1.jpg">
-          <img src="img/band_img/img2.jpg">
-          <img src="img/band_img/img3.jpg">
-          <img src="img/band_img/img4.jpg">
-          <img src="img/band_img/img5.jpg">
-          <img src="img/band_img/img6.jpg">
-          <img src="img/band_img/img7.jpg">
-          <img src="img/band_img/img8.jpg">
-      </div>
-  </div>
+      <div class="pagebreak"></div>
 
-  <div class="container contact">
-    <div id="contact-wrapper">
-      <h3>Contact us on Facebook, Twitter and Instagram</h3>
-      <div id="soc-media-nav">
-        <a href="https://facebook.com"><img id="facebook-button"src="img/facebook_gray.png" class="soc-media-icon"></a>
-        <a href="https://twitter.com"><img id="twitter-button" src="img/twitter_gray.png" class="soc-media-icon"></a>
-        <a href="https://instagram.com"><img id="instagram-button" src="img/instagram_gray.png" class="soc-media-icon"></a>
-      </div>
-      <p>Stay up to date on our latest shows by signing up for our newsletter</p>
-      <input type="email" id="email"placeholder="Email Address">
-      <button id="newsletter-submit">Submit</button>
-    </div>
-  </div>
+      <section id="shows">
+        <div class="container">
+          
+        </div>
+      </section>
+
+      <div class="pagebreak"></div>
+
+      <section id="pictures">
+        <div class="container">
+          
+        </div>
+      </section>
+
+      <div class="pagebreak"></div>
+
+      <section id="contact">
+        <div class="container">
+          
+        </div>
+      </section>
   
-
-  <footer>
-    <p>&copy Quickline 2017</p>
-  </footer>
 
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-  <script src="parallax.min.js"></script>
-  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
