@@ -41,15 +41,29 @@
 
 
  $(window).scroll(function(){
-  if ($(window).scrollTop() > $('#landing').height() && $(window).width() > 768) {
+  if ($(window).scrollTop() > $('#landing').height()) {
     $('#nav-logo').fadeIn();
   } else {
-    $('#nav-logo').css('display', 'none');
+    $('#nav-logo').fadeOut();
   } 
  })
 
+ $(window).resize(function(){
+   if($(window).width() < 768) {
+    $('#nav-logo').css('display', 'none');
+   }
+ })
 
 
  $('#landing').parallax({imageSrc: 'img/concert3.jpeg'});
  $('#about').parallax({imageSrc: 'img/record.jpeg'});
  $('#shows').parallax({imageSrc: 'img/mic3.jpg'});
+
+
+ $(window).resize(function(){
+   if($(this).width() < 700) {
+    $('#shows').css('background-color', 'black');
+   } else {
+    $('#shows').css('background-color', 'transparent');
+   }
+ })

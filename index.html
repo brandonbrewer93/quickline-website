@@ -14,7 +14,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul class="navbar-nav text-center">
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
@@ -33,51 +33,76 @@
         </div>
       </nav>
 
-      <section id="landing" data-position="-20px 0px">
-              <h1 id="landing-logo" class="text-center">Quickline</h1>
-              <img id="scroll-arrow" src="img/down_arrow.png">
+      <section id="landing">
+        <div class="row">
+          <div class="col d-flex flex-column justify-content-around">
+            <h1 id="landing-logo" class="text-center">Quickline</h1>
+            <img class="mx-auto" id="scroll-arrow" src="img/down_arrow.png">
+          </div>
+        </div>
       </section>
 
       <div class="pagebreak"></div>
 
       <section id="about">
         <div class="row h-100 mx-1 align-items-center">
-          <div class="col-md-3">
-            <div class="card text-left">
+          <div class="col-sm-6 col-lg-3 order-3 order-lg-1">
+            <div class="card">
               <div class="card-header">
-                Setlist
+                <h2>Setlist</h2>
               </div>
-              <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
+              <div class="card-body d-flex flex-column justify-content-around">
+               <ul class="list-group">
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+               </ul>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-sm-12 col-lg-6 order-1 order-lg-2">
             <div class="card text-center">
               <div id="middle" class="card-header">
-                About The Band
+                <h2>About The Band</h2>
               </div>
-              <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
+              <div class="card-body d-flex flex-column justify-content-around">
+                <p class="h-100 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui est fugit laudantium quidem dolorem magni accusantium. Ipsum esse natus impedit blanditiis ratione necessitatibus deleniti commodi pariatur doloremque et! Nobis, quidem corrupti et veritatis quas ab maiores, expedita, at eligendi fuga sunt obcaecati inventore ad voluptatibus vero molestias? Voluptas quo, repellendus expedita nemo debitis veritatis quidem dicta sint, molestias nobis consectetur magni id autem totam. Beatae autem numquam reiciendis delectus tempore architecto dolor voluptas distinctio. Pariatur quas praesentium suscipit temporibus nobis, sapiente quis optio magnam est, sit nostrum magni ipsa. Non modi delectus sequi tempore architecto repellat ad quas ex consequatur?</p>
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card text-right">
+          <div class="col-sm-6 col-lg-3 order-2 order-lg-3">
+            <div class="card">
               <div class="card-header">
-                Members
+                <h2>Members</h2>
               </div>
-              <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
+              <div class="card-body d-flex flex-column justify-content-around">
+                <div class="list-group">
+                  <div class="list-group-item">
+                    <h3><strong>Sam</strong></h3>
+                    <p>Harmonica, Vocals</p>
+                  </div>
+                  <div class="list-group-item">
+                    <h3><strong>Michael</strong></h3>
+                    <p>Guitar, Vocals</p>
+                  </div>
+                  <div class="list-group-item">
+                    <h3><strong>Alex</strong></h3>
+                    <p>Bass, Ukelele, Vocals</p>
+                  </div>
+                  <div class="list-group-item">
+                    <h3><strong>Trevor</strong></h3>
+                    <p>Drums, Vocals</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

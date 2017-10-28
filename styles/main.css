@@ -13,6 +13,7 @@ body {
 .navbar {
   background-color: rgba(0, 0, 0, .8);
   box-shadow: 1px 3px 4px rgba(0,0,0,.5);
+  padding: 0;
 }
 
 .navbar-toggler {
@@ -26,8 +27,7 @@ body {
 
 .nav-link {
   font-size: 1.3em;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 10px;
   transition: all .3s;
 }
 
@@ -55,27 +55,19 @@ section {
   );
   background-size: cover;
   background-position: center;
-  /* background-attachment: fixed; */
 }
 
 #about {
-  background: transparent;
-  background-size: cover;
-  background-position: center;
-  /* background-attachment: fixed; */
+  background: radial-gradient(transparent, rgba(115, 116, 122, 0.2));
 }
 
 #shows {
   background: transparent;
-  background-size: cover;
-  background-position: center;
-  /* background-attachment: fixed; */
 }
 
 #pictures {
-  background: #1D4350;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #1D4350;
+  background: linear-gradient(to top right, #A43931, #1D4350);
   
 }
 
@@ -83,38 +75,58 @@ section {
   height: 600px;
   background-image: url('../img/esc.png');
   background-repeat: repeat;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
 }
 
 #landing-logo {
   color: white;
-  margin-top: 200px;
+  /* margin-top: 200px; */
   font-size: 10em;
 }
 
 #scroll-arrow {
   width: 50px;
   height: 50px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .card {
   height: 800px;
+  border: none;
+  border-radius: 0;
   box-shadow: 1px 2px 3px rgba(0,0,0,.5);
 }
 
-@media (max-width: 768px) {
+.card-header {
+  background-color: rgb(124, 124, 124);
+  border-radius: 0;
+  color: white;
+}
+
+.card-header:first-child {
+  border-radius: 0;
+}
+
+@media (max-width: 992px) {
   #about {
     height: 100%;
   }
+
+  .card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
 
   #landing-logo {
     font-size: 6em;
   }
 
   #scroll-arrow {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
   }
 
   .card {
@@ -128,8 +140,12 @@ section {
   }
 
   #scroll-arrow {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .card {
+    height: 100%;
   }
 }
 
@@ -160,7 +176,6 @@ section {
 
 img {
   width: 30%;
-  margin: .5%;
 }
 
 #nav-logo {
@@ -170,4 +185,9 @@ img {
   color: white;
   font-size: 2em;
   display: none;
+}
+
+p {
+  font-family: 'Open Sans Condensed';
+  font-size: 1.3em;
 }
