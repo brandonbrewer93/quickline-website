@@ -38,3 +38,18 @@
     });
     
   });
+
+
+ $(window).scroll(function(){
+  if ($(window).scrollTop() > $('#landing').height() && $(window).width() > 768) {
+    $('#nav-logo').fadeIn();
+  } else {
+    $('#nav-logo').css('display', 'none');
+  } 
+ })
+
+
+
+ $('#landing').parallax({imageSrc: 'img/concert3.jpeg'});
+ $('#about').parallax({imageSrc: 'img/record.jpeg'});
+ $('#shows').parallax({imageSrc: 'img/mic3.jpg'});
