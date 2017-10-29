@@ -30,6 +30,40 @@ Keyframe Animations
 }
 
 /****************************************
+Email validation classes
+****************************************/
+
+.valid {
+  background-color: #00B7FF;
+}
+
+.invalid {
+  background-color: #C77373
+}
+
+/****************************************
+Lightbox overlay
+****************************************/
+
+#overlay {
+  background:rgba(0,0,0,0.9);
+  width:100%;
+  height:100vh;
+  position: fixed;
+  top: 0;
+  display:none;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#overlay img {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+/****************************************
 Body
 ****************************************/
 
@@ -38,6 +72,7 @@ body {
   background: #5F5F5F;
   font-family: 'Megrim', cursive;
   overflow-x: hidden;
+  user-select: none;
 }
 
 .pagebreak {
@@ -114,6 +149,10 @@ Landing
   font-size: 10em;
 }
 
+#landing a {
+  margin: 0 auto;
+}
+
 #scroll-arrow {
   width: 50px;
   height: 50px;
@@ -169,6 +208,25 @@ Shows
   background: linear-gradient(to right, rgba(150, 150, 150, 0.702), rgba(63, 63, 63, 0.702));
 }
 
+.list-group-item:first-child,
+.list-group-item:last-child
+ {
+  border-radius: 0;
+}
+
+#shows li {
+  font-weight: bold;
+  height: 60px;
+}
+
+#shows button:hover {
+  cursor: pointer;
+}
+
+#shows button:focus {
+  outline: none;
+}
+
 /****************************************
 Pictures
 ****************************************/
@@ -177,7 +235,7 @@ Pictures
   height: 100%;
   background: #1D4350;
   background: linear-gradient(to top right, #A43931, #1D4350);
- 
+  
   content: "";
   display: table;
   clear: both;
@@ -194,6 +252,7 @@ Pictures
 
 .gallery-image:hover {
   filter: grayscale(0);
+  cursor: pointer;
 }
 
 .gallery-image:nth-of-type(even){
@@ -216,81 +275,6 @@ Contact
 #contact .container {
   animation-delay: .3s;
 }
-
-/****************************************
-Media Queries
-****************************************/
-
-@media (max-width: 992px) {
-  #about {
-    height: 100%;
-  }
-
-  .card {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .gallery-image {
-    width: 50%;
-  }
-}
-
-@media (max-width: 768px) {
-
-  #landing-logo {
-    font-size: 6em;
-  }
-
-  #scroll-arrow {
-    width: 40px;
-    height: 40px;
-  }
-
-  .card {
-    margin: 10px auto;
-  }
-}
-
-@media (max-width: 576px) {
-  #landing-logo {
-    font-size: 4em;
-  }
-
-  #scroll-arrow {
-    width: 30px;
-    height: 30px;
-  }
-
-  .card {
-    height: 100%;
-  }
-
-  .gallery-image {
-    width: 100%;
-  }
-
-  .gallery-image:nth-of-type(even){
-    animation-delay: 0s;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #contact {
   color: white;
@@ -361,58 +345,60 @@ Media Queries
   outline: none;
 }
 
-/***
-Validation Classes
-***/
+/****************************************
+Media Queries
+****************************************/
 
-.valid {
-  background-color: #00B7FF;
+@media (max-width: 992px) {
+  #about {
+    height: 100%;
+  }
+
+  .card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .gallery-image {
+    width: 50%;
+  }
 }
 
-.invalid {
-  background-color: #C77373
+@media (max-width: 768px) {
+
+  #landing-logo {
+    font-size: 6em;
+  }
+
+  #scroll-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .card {
+    margin: 10px auto;
+  }
 }
 
+@media (max-width: 576px) {
+  #landing-logo {
+    font-size: 4em;
+  }
 
-.list-group-item:first-child,
-.list-group-item:last-child
- {
-  border-radius: 0;
-}
+  #scroll-arrow {
+    width: 30px;
+    height: 30px;
+  }
 
-#shows li {
-  font-weight: bold;
-  height: 60px;
-}
+  .card {
+    height: 100%;
+  }
 
-#shows button:hover {
-  cursor: pointer;
-}
+  .gallery-image {
+    width: 100%;
+  }
 
-#shows button:focus {
-  outline: none;
-}
-
-
-
-
-
-
-
-
-/** Start Coding Here **/
-
-#overlay {
-  background: rgba(0, 0, 0, .7);
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  text-align: center;
-}
-
-#overlay img {
-  width: 100%;
+  .gallery-image:nth-of-type(even){
+    animation-delay: 0s;
+  }
 }

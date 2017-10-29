@@ -55,6 +55,8 @@
     });
   });
 
+// Animate show list items when they enter viewport.
+
   $(window).scroll(function(event) {
     $("#shows .list-group-item").each(function(i, el) {
       var el = $(el);
@@ -63,6 +65,8 @@
       } 
     });
   });
+
+  // Animate contact section when it enters the viewport.
 
   $(window).scroll(function(event) {
     $("#contact .container").each(function(i, el) {
@@ -96,18 +100,9 @@
  $('#shows').parallax({imageSrc: 'img/mic3.jpg'});
 
 
-//  $(window).resize(function(){
-//    if($(this).width() < 700) {
-//     $('#shows').css('background-color', 'black');
-//    } else {
-//     $('#shows').css('background-color', 'transparent');
-//    }
-//  })
 
 
-
-
-
+// Email Validation
 
 function validateEmail(email) {
   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -137,41 +132,26 @@ $("#newsletter-submit").bind("click", validate);
 
 
 
-
-
-
-
-
-//Problem: User when clicking on image goes to a dead end.
-//Solution: Create an overlay with the large image - lightbox.
+// Lightbox
 
 var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
 var $caption = $("<p></p>");
 
-// Add image to overlay
 $overlay.append($image);
 
-// Add overlay
 $("body").append($overlay)
-  // A caption
 
-
-// Capture the click event on a link to an image.
-$("#pictures a").click(function(event) {
+$(".gallery-image").click(function(event) {
   event.preventDefault();
-  var imageLocation = $(this).attr("href");
-  // Update the overlay with the image linked in the link.
+  var imageLocation = $(this).attr("data-img");
   $image.attr("src", imageLocation);
   
-  // Show the overlay.
-  $overlay.show();
+  $('body').css('overflowY', 'hidden');
+  $overlay.css('display', 'flex');
 })
-  
 
-
-//3. When overlay is clicked
 $overlay.click(function() {
-  //3.1 Hide the overlay
+  $('body').css('overflowY', 'visible');
   $overlay.hide();
 });
