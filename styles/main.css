@@ -1,4 +1,40 @@
+/****************************************
+Keyframe Animations
+****************************************/
+
+@keyframes fade-up {
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-up {
+  transform: translateY(100px);
+  opacity: 0;
+  animation: fade-up 1s ease forwards;
+}
+
+@keyframes fade-right {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(-300px);
+  animation: fade-right 1s ease forwards;
+  animation-delay: .2s;
+}
+
+/****************************************
+Body
+****************************************/
+
 body {
+  position: relative;
   background: #5F5F5F;
   font-family: 'Megrim', cursive;
   overflow-x: hidden;
@@ -66,16 +102,14 @@ Landing
   flex-direction: column;
   justify-content: space-around;
 
-  background: radial-gradient(
-    rgba(197, 14, 14, 0.32),
-    rgba(15, 34, 182, 0.32)
-  );
+  background: radial-gradient(rgba(197, 14, 14, 0.32), rgba(15, 34, 182, 0.32));
   background-size: cover;
   background-position: center;
 }
 
 #landing-logo {
   color: white;
+  font-weight: bold;
   /* margin-top: 200px; */
   font-size: 10em;
 }
@@ -84,6 +118,7 @@ Landing
   width: 50px;
   height: 50px;
   transition: .2s ease-in-out;
+  animation-delay: .2s;
 }
 
 #scroll-arrow:hover {
@@ -102,34 +137,16 @@ About
 .card {
   height: 800px;
   border: none;
-  border-radius: 0;
   box-shadow: 4px 5px 10px rgba(0,0,0,.5);
 }
 
 .card-header {
-  background-color: rgb(124, 124, 124);
-  border-radius: 0;
+  text-shadow: 2px 2px 4px black;
+  background: linear-gradient(to right, rgba(150, 150, 150, 0.702), rgba(63, 63, 63, 0.702));
   color: white;
 }
 
-.card-header:first-child {
-  border-radius: 0;
-}
-
-.come-in {
-  transform: translateY(200px);
-  opacity: 0;
-  animation: come-in 1s ease forwards;
-}
-
-@keyframes come-in {
-  to { 
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-p {
+.card p {
   font-family: 'Open Sans Condensed';
   font-size: 1.3em;
 }
@@ -139,7 +156,17 @@ Shows
 ****************************************/
 
 #shows {
+  height: 100vh;
+  max-height: 800px;
   background: transparent;
+}
+
+#shows h1 {
+  color: white;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 4px black;
+  border-radius: 5px;
+  background: linear-gradient(to right, rgba(150, 150, 150, 0.702), rgba(63, 63, 63, 0.702));
 }
 
 /****************************************
@@ -170,7 +197,7 @@ Pictures
 }
 
 .gallery-image:nth-of-type(even){
-  animation-delay: .3s;
+  animation-delay: .4s;
 }
 
 /****************************************
@@ -178,10 +205,16 @@ Contact
 ****************************************/
 
 #contact {
+  overflow-y: hidden;
+
   height: 600px;
   background-image: url('../img/esc.png');
   background-repeat: repeat;
   background-attachment: fixed;
+}
+
+#contact .container {
+  animation-delay: .3s;
 }
 
 /****************************************
@@ -242,3 +275,144 @@ Media Queries
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contact {
+  color: white;
+  font-family: inherit;
+  text-align: center;
+}
+
+#soc-media-nav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.soc-media-icon {
+  width: 40px;
+  transition: 0.3s ease;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.soc-media-icon:hover {
+  transform: scale(1.3);
+}
+
+#facebook-button:hover {
+  background-color: #3B5998;
+}
+
+#twitter-button:hover {
+  background-color: #1DA1F2;
+}
+
+#instagram-button:hover {
+  background-color: #bc2a8d;
+}
+
+#contact input{
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  color: black;
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+  border: none;
+}
+
+#contact input:focus {
+  outline: none;
+}
+
+#contact button {
+  font-weight: bold;
+  font-size: 2em;
+  color: black;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 400px;
+  height: 60px;  
+  border: none;
+  background-color: #57DBAF;
+  animation-duration: .7s;
+}
+
+#contact button:focus {
+  outline: none;
+}
+
+/***
+Validation Classes
+***/
+
+.valid {
+  background-color: #00B7FF;
+}
+
+.invalid {
+  background-color: #C77373
+}
+
+
+.list-group-item:first-child,
+.list-group-item:last-child
+ {
+  border-radius: 0;
+}
+
+#shows li {
+  font-weight: bold;
+  height: 60px;
+}
+
+#shows button:hover {
+  cursor: pointer;
+}
+
+#shows button:focus {
+  outline: none;
+}
+
+
+
+
+
+
+
+
+/** Start Coding Here **/
+
+#overlay {
+  background: rgba(0, 0, 0, .7);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+}
+
+#overlay img {
+  width: 100%;
+}

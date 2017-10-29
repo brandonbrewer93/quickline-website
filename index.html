@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="styles/main.css">
   <link href="https://fonts.googleapis.com/css?family=Megrim|Poiret+One|Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/animate.css">
 </head>
 
 <body>
@@ -35,8 +36,8 @@
       </nav>
 
       <section id="landing">
-        <div class="row">
-          <div class="col d-flex flex-column justify-content-around">
+        <div class="row fade-up">
+          <div class="col d-flex flex-column justify-content-around fade-up">
             <h1 id="landing-logo" class="text-center">Quickline</h1>
             <img class="mx-auto" id="scroll-arrow" src="img/down_arrow.png">
           </div>
@@ -113,30 +114,81 @@
       <div class="pagebreak"></div>
 
       <section id="shows">
-        <div class="container">
-          
+        <div class="container d-flex flex-column justify-content-center">
+          <h1 class="text-center">Upcoming Shows</h1>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Gypsys Bar and Grill
+              <br>1-1-18
+              <button class="badge badge-dark">Tickets</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Gypsys Bar and Grill
+              <br>1-1-18
+              <button class="badge badge-dark">Tickets</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Gypsys Bar and Grill
+              <br>1-1-18
+              <button class="badge badge-dark">Tickets</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Gypsys Bar and Grill
+              <br>1-1-18
+              <button class="badge badge-dark">Tickets</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Gypsys Bar and Grill
+              <br>1-1-18
+              <button class="badge badge-dark">Tickets</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Gypsys Bar and Grill
+              <br>1-1-18
+              <button class="badge badge-dark">Tickets</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Gypsys Bar and Grill
+              <br>1-1-18
+              <button class="badge badge-dark">Tickets</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Gypsys Bar and Grill
+              <br>1-1-18
+              <button class="badge badge-dark">Tickets</button>
+            </li>
+          </ul>
         </div>
       </section>
 
       <div class="pagebreak"></div>
 
       <section id="pictures">
-        <img class="gallery-image" src="img/band_img/img1.jpg" class="img-fluid">
-        <img class="gallery-image" src="img/band_img/img2.jpg" class="img-fluid">
-        <img class="gallery-image" src="img/band_img/img3.jpg" class="img-fluid">
-        <img class="gallery-image" src="img/band_img/img4.jpg" class="img-fluid">
-        <img class="gallery-image" src="img/band_img/img5.jpg" class="img-fluid">
-        <img class="gallery-image" src="img/band_img/img6.jpg" class="img-fluid">
-        <img class="gallery-image" src="img/band_img/img7.jpg" class="img-fluid">
-        <img class="gallery-image" src="img/band_img/img8.jpg" class="img-fluid">
-        <img class="gallery-image" src="img/band_img/img9.jpg" class="img-fluid">
+        <a href="img/band_img/img1.jpg"><img class="gallery-image" src="img/band_img/img1.jpg" class="img-fluid"></a>
+        <a href="img/band_img/img2.jpg"><img class="gallery-image" src="img/band_img/img2.jpg" class="img-fluid"></a>
+        <a href="img/band_img/img3.jpg"><img class="gallery-image" src="img/band_img/img3.jpg" class="img-fluid"></a>
+        <a href="img/band_img/img4.jpg"><img class="gallery-image" src="img/band_img/img4.jpg" class="img-fluid"></a>
+        <a href="img/band_img/img5.jpg"><img class="gallery-image" src="img/band_img/img5.jpg" class="img-fluid"></a>
+        <a href="img/band_img/img6.jpg"><img class="gallery-image" src="img/band_img/img6.jpg" class="img-fluid"></a>
+        <a href="img/band_img/img7.jpg"><img class="gallery-image" src="img/band_img/img7.jpg" class="img-fluid"></a>
+        <a href="img/band_img/img8.jpg"><img class="gallery-image" src="img/band_img/img8.jpg" class="img-fluid"></a>
+        <a href="img/band_img/img9.jpg"><img class="gallery-image" src="img/band_img/img9.jpg" class="img-fluid"></a>
       </section>
 
       <div class="pagebreak"></div>
 
       <section id="contact">
-        <div class="container">
-          
+        <div class="container d-flex flex-column justify-content-center">
+          <h3>Contact us on Facebook, Twitter and Instagram</h3>
+          <div id="soc-media-nav">
+            <a href="https://facebook.com"><img id="facebook-button"src="img/facebook_gray.png" class="soc-media-icon"></a>
+            <a href="https://twitter.com"><img id="twitter-button" src="img/twitter_gray.png" class="soc-media-icon"></a>
+            <a href="https://instagram.com"><img id="instagram-button" src="img/instagram_gray.png" class="soc-media-icon"></a>
+          </div>
+          <p>Stay up to date on our latest shows by signing up for our newsletter</p>
+          <input type="name" id="name" placeholder="First Name" >
+          <input type="email" id="email"placeholder="Email Address">
+          <button id="newsletter-submit">Submit</button>
         </div>
       </section>
   

@@ -39,7 +39,7 @@
     $(".card").each(function(i, el) {
       var el = $(el);
       if (el.visible(true)) {
-        el.addClass("come-in"); 
+        el.addClass("fade-up"); 
       } 
     });
   });
@@ -50,7 +50,25 @@
     $(".gallery-image").each(function(i, el) {
       var el = $(el);
       if (el.visible(true)) {
-        el.addClass("come-in"); 
+        el.addClass("fade-up"); 
+      } 
+    });
+  });
+
+  $(window).scroll(function(event) {
+    $("#shows .list-group-item").each(function(i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+        el.addClass("fade-right"); 
+      } 
+    });
+  });
+
+  $(window).scroll(function(event) {
+    $("#contact .container").each(function(i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+        el.addClass("fade-up"); 
       } 
     });
   });
@@ -85,3 +103,75 @@
 //     $('#shows').css('background-color', 'transparent');
 //    }
 //  })
+
+
+
+
+
+
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+function validate() {
+  var email = $("#email").val();
+  if (validateEmail(email)) {
+    $('#email').removeClass('invalid');
+    $('#email').addClass('valid');
+    $('#newsletter-submit').prop('disabled', true);
+    $('#newsletter-submit').addClass('animated bounce').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass('animated bounce');
+    });
+  } else {
+    $(this).addClass('animated shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass('animated shake');
+    });
+    $('#email').addClass('invalid');
+  }
+  return false;
+}
+
+$("#newsletter-submit").bind("click", validate);
+
+
+
+
+
+
+
+
+
+//Problem: User when clicking on image goes to a dead end.
+//Solution: Create an overlay with the large image - lightbox.
+
+var $overlay = $('<div id="overlay"></div>');
+var $image = $("<img>");
+var $caption = $("<p></p>");
+
+// Add image to overlay
+$overlay.append($image);
+
+// Add overlay
+$("body").append($overlay)
+  // A caption
+
+
+// Capture the click event on a link to an image.
+$("#pictures a").click(function(event) {
+  event.preventDefault();
+  var imageLocation = $(this).attr("href");
+  // Update the overlay with the image linked in the link.
+  $image.attr("src", imageLocation);
+  
+  // Show the overlay.
+  $overlay.show();
+})
+  
+
+
+//3. When overlay is clicked
+$overlay.click(function() {
+  //3.1 Hide the overlay
+  $overlay.hide();
+});
