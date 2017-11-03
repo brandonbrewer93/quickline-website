@@ -80,12 +80,14 @@
 // Add navbar logo when you scroll past landing section.
 
  $(window).scroll(function(){
-  if ($(window).scrollTop() > $('#landing').height()) {
+  if ($(window).scrollTop() > $('#landing').height() && $(window).width() > 768) {
     $('#nav-logo').fadeIn();
   } else {
     $('#nav-logo').fadeOut();
   } 
  })
+
+// Hide navbar logo when screen enters medium breakpoint.
 
  $(window).resize(function(){
    if($(window).width() < 768) {
@@ -96,7 +98,7 @@
 // Background image parallax effect.
 
  $('#landing').parallax({imageSrc: 'img/concert3.jpeg'});
- $('#about').parallax({imageSrc: 'img/record.jpeg'});
+ $('#about').parallax({imageSrc: 'img/record2.jpg'});
  $('#shows').parallax({imageSrc: 'img/mic3.jpg'});
 
 
