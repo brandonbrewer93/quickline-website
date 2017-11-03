@@ -1,9 +1,14 @@
+// Background image parallax effect.
+
+$('#landing').parallax({imageSrc: 'img/concert3.jpeg'});
+$('#about').parallax({imageSrc: 'img/record2.jpg'});
+$('#shows').parallax({imageSrc: 'img/mic3.jpg'});
 
 /**
  * 
- * Scroll into view plugin
+ * Scroll into view plugin, checks if an element is in the viewport.
  * 
- */
+ **/
 
 (function($) {
   
@@ -32,6 +37,12 @@
       return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
     };
   })(jQuery);
+
+/**
+  * 
+  * End of plugin.
+  * 
+  **/
 
   // Animate cards when they enter viewport.
 
@@ -77,6 +88,17 @@
     });
   });
 
+// Collect navbar items and scroll to corresponding section of the page when clicked, accomplished by using scrollTo.js plugin.
+
+var navButtons = $('.nav-link');
+
+for (let i = 0; i < navButtons.length; i++) {
+  $(navButtons[i]).click(function(){
+    var div = $(this).attr('data-link');
+    $(window).scrollTo(div, {duration: 1000, offset: -47});
+  })
+}
+
 // Add navbar logo when you scroll past landing section.
 
  $(window).scroll(function(){
@@ -94,15 +116,6 @@
     $('#nav-logo').css('display', 'none');
    }
  })
-
-// Background image parallax effect.
-
- $('#landing').parallax({imageSrc: 'img/concert3.jpeg'});
- $('#about').parallax({imageSrc: 'img/record2.jpg'});
- $('#shows').parallax({imageSrc: 'img/mic3.jpg'});
-
-
-
 
 // Email Validation
 
