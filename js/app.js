@@ -44,53 +44,33 @@ $('#shows').parallax({imageSrc: 'img/mic3.jpg'});
   * 
   **/
 
+
+  // Function to animate element when in viewport.
+  function animation(element, animation){
+    $(window).scroll(function(event) {
+      $(element).each(function(i, el) {
+        var el = $(el);
+        if (el.visible(true)) {
+          el.addClass(animation); 
+        } 
+      });
+    });
+  }
+  
   // Animate cards when they enter viewport.
-
-  $(window).scroll(function(event) {
-    $(".card").each(function(i, el) {
-      var el = $(el);
-      if (el.visible(true)) {
-        el.addClass("fade-up"); 
-      } 
-    });
-  });
-
+  animation('.card', 'fade-up');
   // Animate photos when they enter viewport.
-
-  $(window).scroll(function(event) {
-    $(".gallery-image").each(function(i, el) {
-      var el = $(el);
-      if (el.visible(true)) {
-        el.addClass("fade-up"); 
-      } 
-    });
-  });
-
-// Animate show list items when they enter viewport.
-
-  $(window).scroll(function(event) {
-    $("#shows .list-group-item").each(function(i, el) {
-      var el = $(el);
-      if (el.visible(true)) {
-        el.addClass("fade-right"); 
-      } 
-    });
-  });
-
+  animation('.gallery-image', 'fade-up');
+  // Animate show list items when they enter viewport.
+  animation('#shows .list-group-item', 'fade-right');
   // Animate contact section when it enters the viewport.
+  animation('#contact .container', 'fade-up');
 
-  $(window).scroll(function(event) {
-    $("#contact .container").each(function(i, el) {
-      var el = $(el);
-      if (el.visible(true)) {
-        el.addClass("fade-up"); 
-      } 
-    });
-  });
 
-// Collect navbar items and scroll to corresponding section of the page when clicked, accomplished by using scrollTo.js plugin.
+// Collect navbar items and down arrow and scroll to corresponding section of the page when clicked, accomplished by using scrollTo.js plugin.
 
 var navButtons = $('.nav-link');
+navButtons.push($('#scroll-arrow'));
 
 for (let i = 0; i < navButtons.length; i++) {
   $(navButtons[i]).click(function(){
@@ -102,7 +82,7 @@ for (let i = 0; i < navButtons.length; i++) {
 // Add navbar logo when you scroll past landing section.
 
  $(window).scroll(function(){
-  if ($(window).scrollTop() > $('#landing').height() && $(window).width() > 768) {
+  if ($(window).scrollTop() > ($('#landing').height() - 100) && $(window).width() > 768) {
     $('#nav-logo').fadeIn();
   } else {
     $('#nav-logo').fadeOut();
@@ -116,6 +96,7 @@ for (let i = 0; i < navButtons.length; i++) {
     $('#nav-logo').css('display', 'none');
    }
  })
+
 
 // Email Validation
 
@@ -143,8 +124,6 @@ function validate() {
 }
 
 $("#newsletter-submit").bind("click", validate);
-
-
 
 
 // Lightbox

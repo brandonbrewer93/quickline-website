@@ -1,199 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quickline</title>
-  <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico'/>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Megrim|Poiret+One|Open+Sans+Condensed:300" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="styles/animate.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quickline</title>
+    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico'/>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Megrim|Poiret+One|Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/animate.css">
+  </head>
 
-<body>
-  <nav class="navbar fixed-top navbar-expand-md navbar-dark justify-content-around">
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav text-center">
-        <li class="nav-item nav-link" data-link="#about">About</li>
-        <li class="nav-item nav-link" data-link="#shows">Shows</li>
-        <li id="nav-logo"><strong>Quickline</strong></li>
-        <li class="nav-item nav-link" data-link="#pictures">Pictures</li>
-        <li class="nav-item nav-link" data-link="#contact">Contact</li>
-      </ul>
-    </div>
-  </nav>
-
-  <section id="landing">
-    <div class="row fade-up">
-      <div class="col d-flex flex-column justify-content-around fade-up">
-        <h1 id="landing-logo" class="text-center">Quickline</h1>
-        <a href="#about"><img class="mx-auto" id="scroll-arrow" src="img/down_arrow.png"></a>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark justify-content-around">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item nav-link" data-link="#about">About</li>
+          <li class="nav-item nav-link" data-link="#shows">Shows</li>
+          <li id="nav-logo"><strong>Quickline</strong></li>
+          <li class="nav-item nav-link" data-link="#pictures">Pictures</li>
+          <li class="nav-item nav-link" data-link="#contact">Contact</li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <div class="pagebreak"></div>
-
-  <section id="about">
-    <div class="row h-100 mx-1 align-items-center">
-      <div class="col-sm-6 col-lg-3 order-3 order-lg-1">
-        <div class="card">
-          <div class="card-header">
-            <h2>Setlist</h2>
-          </div>
-          <div class="card-body d-flex flex-column justify-content-around">
-            <ul class="list-group">
-            <li class="list-group-item text-center">Lorem Ipsum</li>
-            <li class="list-group-item text-center">Lorem Ipsum</li>
-            <li class="list-group-item text-center">Lorem Ipsum</li>
-            <li class="list-group-item text-center">Lorem Ipsum</li>
-            <li class="list-group-item text-center">Lorem Ipsum</li>
-            <li class="list-group-item text-center">Lorem Ipsum</li>
-            <li class="list-group-item text-center">Lorem Ipsum</li>
-            <li class="list-group-item text-center">Lorem Ipsum</li>
-            <li class="list-group-item text-center">Lorem Ipsum</li>
-            <li class="list-group-item text-center">Lorem Ipsum</li>
-            <li class="list-group-item text-center">Lorem Ipsum</li>
-            <li class="list-group-item text-center">Lorem Ipsum</li>
-            </ul>
-          </div>
+    <!-- Landing Section -->
+    <section id="landing">
+      <div class="row fade-up">
+        <div class="col d-flex flex-column justify-content-around fade-up">
+          <h1 id="landing-logo" class="text-center">Quickline</h1>
+          <img class="mx-auto" id="scroll-arrow" src="img/down_arrow.png" data-link="#about">
         </div>
       </div>
-      <div class="col-sm-12 col-lg-6 order-1 order-lg-2">
-        <div class="card text-center">
-          <div class="card-header">
-            <h2>About The Band</h2>
-          </div>
-          <div class="card-body d-flex flex-column justify-content-around">
-            <p class="h-100 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui est fugit laudantium quidem dolorem magni accusantium. Ipsum esse natus impedit blanditiis ratione necessitatibus deleniti commodi pariatur doloremque et! Nobis, quidem corrupti et veritatis quas ab maiores, expedita, at eligendi fuga sunt obcaecati inventore ad voluptatibus vero molestias? Voluptas quo, repellendus expedita nemo debitis veritatis quidem dicta sint, molestias nobis consectetur magni id autem totam. Beatae autem numquam reiciendis delectus tempore architecto dolor voluptas distinctio. Pariatur quas praesentium suscipit temporibus nobis, sapiente quis optio magnam est, sit nostrum magni ipsa. Non modi delectus sequi tempore architecto repellat ad quas ex consequatur?</p>
+    </section>
+
+    <!-- Div to break up page content -->
+    <div class="pagebreak"></div>
+
+    <!-- About Secton -->
+    <section id="about">
+      <div class="row h-100 mx-1 align-items-center">
+        <div class="col-sm-6 col-lg-3 order-3 order-lg-1">
+          <!-- Setlist Card -->
+          <div class="card">
+            <div class="card-header">
+              <h2>Setlist</h2>
+            </div>
+            <div class="card-body d-flex flex-column justify-content-around">
+              <ul class="list-group">
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+                <li class="list-group-item text-center">Lorem Ipsum</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-sm-6 col-lg-3 order-2 order-lg-3">
-        <div class="card">
-          <div class="card-header">
-            <h2>Members</h2>
+        <div class="col-sm-12 col-lg-6 order-1 order-lg-2">
+          <!-- About Us Card -->
+          <div class="card text-center">
+            <div class="card-header">
+              <h2>About The Band</h2>
+            </div>
+            <div class="card-body d-flex flex-column justify-content-around">
+              <p class="h-100 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui est fugit laudantium quidem dolorem magni accusantium. Ipsum esse natus impedit blanditiis ratione necessitatibus deleniti commodi pariatur doloremque et! Nobis, quidem corrupti et veritatis quas ab maiores, expedita, at eligendi fuga sunt obcaecati inventore ad voluptatibus vero molestias? Voluptas quo, repellendus expedita nemo debitis veritatis quidem dicta sint, molestias nobis consectetur magni id autem totam. Beatae autem numquam reiciendis delectus tempore architecto dolor voluptas distinctio. Pariatur quas praesentium suscipit temporibus nobis, sapiente quis optio magnam est, sit nostrum magni ipsa. Non modi delectus sequi tempore architecto repellat ad quas ex consequatur?</p>
+            </div>
           </div>
-          <div class="card-body d-flex flex-column justify-content-around">
-            <div class="list-group">
-              <div class="list-group-item">
-                <h3><strong>Sam</strong></h3>
-                <p>Harmonica, Vocals</p>
-              </div>
-              <div class="list-group-item">
-                <h3><strong>Michael</strong></h3>
-                <p>Guitar, Vocals</p>
-              </div>
-              <div class="list-group-item">
-                <h3><strong>Alex</strong></h3>
-                <p>Bass, Ukelele, Vocals</p>
-              </div>
-              <div class="list-group-item">
-                <h3><strong>Trevor</strong></h3>
-                <p>Drums, Vocals</p>
+        </div>
+        <div class="col-sm-6 col-lg-3 order-2 order-lg-3">
+          <!-- Members Card -->
+          <div class="card">
+            <div class="card-header">
+              <h2>Members</h2>
+            </div>
+            <div class="card-body d-flex flex-column justify-content-around">
+              <div class="list-group">
+                <div class="list-group-item">
+                  <h3><strong>Sam</strong></h3>
+                  <p>Harmonica, Vocals</p>
+                </div>
+                <div class="list-group-item">
+                  <h3><strong>Michael</strong></h3>
+                  <p>Guitar, Vocals</p>
+                </div>
+                <div class="list-group-item">
+                  <h3><strong>Alex</strong></h3>
+                  <p>Bass, Ukelele, Vocals</p>
+                </div>
+                <div class="list-group-item">
+                  <h3><strong>Trevor</strong></h3>
+                  <p>Drums, Vocals</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="pagebreak"></div>
+    <!-- Div to break up page content -->
+    <div class="pagebreak"></div>
 
-  <section id="shows">
-    <div class="container d-flex flex-column justify-content-center">
-      <h1 class="text-center">Upcoming Shows</h1>
-      <ul class="list-group">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          Gypsys Bar and Grill
-          <br>1-1-18
-          <button class="badge badge-dark">Tickets</button>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          Gypsys Bar and Grill
-          <br>1-1-18
-          <button class="badge badge-dark">Tickets</button>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          Gypsys Bar and Grill
-          <br>1-1-18
-          <button class="badge badge-dark">Tickets</button>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          Gypsys Bar and Grill
-          <br>1-1-18
-          <button class="badge badge-dark">Tickets</button>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          Gypsys Bar and Grill
-          <br>1-1-18
-          <button class="badge badge-dark">Tickets</button>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          Gypsys Bar and Grill
-          <br>1-1-18
-          <button class="badge badge-dark">Tickets</button>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          Gypsys Bar and Grill
-          <br>1-1-18
-          <button class="badge badge-dark">Tickets</button>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          Gypsys Bar and Grill
-          <br>1-1-18
-          <button class="badge badge-dark">Tickets</button>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <div class="pagebreak"></div>
-
-  <section id="pictures">
-    <img class="gallery-image" src="img/band_img/img1.jpg" class="img-fluid" data-img="img/band_img/img1.jpg">
-    <img class="gallery-image" src="img/band_img/img2.jpg" class="img-fluid" data-img="img/band_img/img2.jpg">
-    <img class="gallery-image" src="img/band_img/img3.jpg" class="img-fluid" data-img="img/band_img/img3.jpg">
-    <img class="gallery-image" src="img/band_img/img4.jpg" class="img-fluid" data-img="img/band_img/img4.jpg">
-    <img class="gallery-image" src="img/band_img/img5.jpg" class="img-fluid" data-img="img/band_img/img5.jpg">
-    <img class="gallery-image" src="img/band_img/img6.jpg" class="img-fluid" data-img="img/band_img/img6.jpg">
-    <img class="gallery-image" src="img/band_img/img7.jpg" class="img-fluid" data-img="img/band_img/img7.jpg">
-    <img class="gallery-image" src="img/band_img/img8.jpg" class="img-fluid" data-img="img/band_img/img8.jpg">
-    <img class="gallery-image" src="img/band_img/img9.jpg" class="img-fluid" data-img="img/band_img/img9.jpg">
-  </section>
-
-  <div class="pagebreak"></div>
-
-  <section id="contact">
-    <div class="container d-flex flex-column justify-content-center">
-      <h3>Contact us on Facebook, Twitter and Instagram</h3>
-      <div id="soc-media-nav">
-        <a href="https://facebook.com"><img id="facebook-button"src="img/facebook_gray.png" class="soc-media-icon"></a>
-        <a href="https://twitter.com"><img id="twitter-button" src="img/twitter_gray.png" class="soc-media-icon"></a>
-        <a href="https://instagram.com"><img id="instagram-button" src="img/instagram_gray.png" class="soc-media-icon"></a>
+    <!-- Shows Section -->
+    <section id="shows">
+      <div class="container d-flex flex-column justify-content-center">
+        <h1 class="text-center">Upcoming Shows</h1>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Gypsys Bar and Grill
+            <br>1-1-18
+            <button class="badge badge-dark">Tickets</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Gypsys Bar and Grill
+            <br>1-1-18
+            <button class="badge badge-dark">Tickets</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Gypsys Bar and Grill
+            <br>1-1-18
+            <button class="badge badge-dark">Tickets</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Gypsys Bar and Grill
+            <br>1-1-18
+            <button class="badge badge-dark">Tickets</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Gypsys Bar and Grill
+            <br>1-1-18
+            <button class="badge badge-dark">Tickets</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Gypsys Bar and Grill
+            <br>1-1-18
+            <button class="badge badge-dark">Tickets</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Gypsys Bar and Grill
+            <br>1-1-18
+            <button class="badge badge-dark">Tickets</button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Gypsys Bar and Grill
+            <br>1-1-18
+            <button class="badge badge-dark">Tickets</button>
+          </li>
+        </ul>
       </div>
-      <p>Stay up to date on our latest shows by signing up for our newsletter</p>
-      <input type="name" id="name" placeholder="First Name" >
-      <input type="email" id="email"placeholder="Email Address">
-      <button id="newsletter-submit">Submit</button>
-    </div>
-  </section>
+    </section>
 
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  <script src="js/parallax.min.js"></script>
-  <script src="js/jquery.scrollTo.min.js"></script>
-  <script src="js/app.js"></script>
-</body>
+    <!-- Div to break up page content -->
+    <div class="pagebreak"></div>
+
+    <!-- Photo Gallery Section -->
+    <section id="pictures">
+      <img class="gallery-image" src="img/band_img/img1.jpg" class="img-fluid" data-img="img/band_img/img1.jpg">
+      <img class="gallery-image" src="img/band_img/img2.jpg" class="img-fluid" data-img="img/band_img/img2.jpg">
+      <img class="gallery-image" src="img/band_img/img3.jpg" class="img-fluid" data-img="img/band_img/img3.jpg">
+      <img class="gallery-image" src="img/band_img/img4.jpg" class="img-fluid" data-img="img/band_img/img4.jpg">
+      <img class="gallery-image" src="img/band_img/img5.jpg" class="img-fluid" data-img="img/band_img/img5.jpg">
+      <img class="gallery-image" src="img/band_img/img6.jpg" class="img-fluid" data-img="img/band_img/img6.jpg">
+      <img class="gallery-image" src="img/band_img/img7.jpg" class="img-fluid" data-img="img/band_img/img7.jpg">
+      <img class="gallery-image" src="img/band_img/img8.jpg" class="img-fluid" data-img="img/band_img/img8.jpg">
+      <img class="gallery-image" src="img/band_img/img9.jpg" class="img-fluid" data-img="img/band_img/img9.jpg">
+    </section>
+
+    <!-- Div to break up page content -->
+    <div class="pagebreak"></div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container d-flex flex-column justify-content-center">
+        <h3>Contact us on Facebook, Twitter and Instagram</h3>
+        <div id="soc-media-nav">
+          <a href="https://facebook.com"><img id="facebook-button"src="img/facebook_gray.png" class="soc-media-icon"></a>
+          <a href="https://twitter.com"><img id="twitter-button" src="img/twitter_gray.png" class="soc-media-icon"></a>
+          <a href="https://instagram.com"><img id="instagram-button" src="img/instagram_gray.png" class="soc-media-icon"></a>
+        </div>
+        <p>Stay up to date on our latest shows by signing up for our newsletter</p>
+        <input type="name" id="name" placeholder="First Name" >
+        <input type="email" id="email"placeholder="Email Address">
+        <button id="newsletter-submit">Submit</button>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>

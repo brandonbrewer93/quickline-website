@@ -10,7 +10,7 @@ Keyframe Animations
 }
 
 .fade-up {
-  transform: translateY(100px);
+  transform: translateY(200px);
   opacity: 0;
   animation: fade-up 1s ease forwards;
   animation-delay: .2s;
@@ -123,7 +123,7 @@ Header
 
 .navbar-toggler span {
   display: block;
-  background-color: #444;
+  background-color: rgb(117, 117, 117);
   height: 3px;
   width: 30px;
   margin-top: 4px;
@@ -186,8 +186,8 @@ Landing
 
 #landing-logo {
   color: white;
+  text-shadow: 2px 2px 10px rgb(39, 39, 39);
   font-weight: bold;
-  /* margin-top: 200px; */
   font-size: 10em;
 }
 
@@ -198,8 +198,7 @@ Landing
 #scroll-arrow {
   width: 50px;
   height: 50px;
-  transition: .2s ease-in-out;
-  animation-delay: .2s;
+  transition: .15s ease-in-out;
 }
 
 #scroll-arrow:hover {
@@ -223,7 +222,7 @@ About
 
 .card-header {
   text-shadow: 2px 2px 4px black;
-  background: linear-gradient(to right, rgba(150, 150, 150, 0.702), rgba(63, 63, 63, 0.702));
+  background: linear-gradient(to right, rgb(150, 150, 150), rgb(63, 63, 63));
   color: white;
 }
 
@@ -246,8 +245,9 @@ Shows
   color: white;
   margin-bottom: 0;
   text-shadow: 2px 2px 4px black;
-  border-radius: 5px;
-  background: linear-gradient(to right, rgba(150, 150, 150, 0.702), rgba(63, 63, 63, 0.702));
+  border-top-right-radius: .25rem;
+  border-top-left-radius: .25rem;
+  background: linear-gradient(to right, rgb(150, 150, 150), rgb(63, 63, 63));
 }
 
 .list-group-item:first-child,
@@ -315,7 +315,7 @@ Contact
 }
 
 #contact .container {
-  animation-delay: .3s;
+  animation-delay: .5s;
 }
 
 #contact {
