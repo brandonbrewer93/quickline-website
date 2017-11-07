@@ -67,7 +67,7 @@ $('#shows').parallax({imageSrc: 'img/mic3.jpg'});
   animation('#contact .container', 'fade-up');
 
 
-// Collect navbar items and down arrow and scroll to corresponding section of the page when clicked, accomplished by using scrollTo.js plugin.
+// Collect navbar items and down arrow and scroll to corresponding section of the page when clicked
 
 var navButtons = $('.nav-link');
 navButtons.push($('#scroll-arrow'));
@@ -98,25 +98,26 @@ for (let i = 0; i < navButtons.length; i++) {
  })
 
 
-// Email Validation
+// Email Validation function
 
 function validateEmail(email) {
   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
 }
 
+// Validate Email, add corresponding color to input, animate button
 function validate() {
   var email = $("#email").val();
   if (validateEmail(email)) {
     $('#email').removeClass('invalid');
     $('#email').addClass('valid');
     $('#newsletter-submit').prop('disabled', true);
-    $('#newsletter-submit').addClass('animated bounce').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      $(this).removeClass('animated bounce');
+    $('#newsletter-submit').addClass('bounce').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass('bounce');
     });
   } else {
-    $(this).addClass('animated shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      $(this).removeClass('animated shake');
+    $(this).addClass('shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass('shake');
     });
     $('#email').addClass('invalid');
   }
