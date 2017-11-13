@@ -45,26 +45,26 @@ $('#shows').parallax({imageSrc: 'img/mic3.jpg'});
   **/
 
 
-  // Function to animate element when in viewport.
-  function animation(element, animation){
-    $(window).scroll(function(event) {
-      $(element).each(function(i, el) {
-        var el = $(el);
-        if (el.visible(true)) {
-          el.addClass(animation); 
-        } 
-      });
+// Function to animate element when in viewport.
+function animation(element, animation){
+  $(window).scroll(function(event) {
+    $(element).each(function(i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+        el.addClass(animation); 
+      } 
     });
-  }
+  });
+}
   
-  // Animate cards when they enter viewport.
-  animation('.card', 'fade-up');
-  // Animate photos when they enter viewport.
-  animation('.gallery-image', 'fade-up');
-  // Animate show list items when they enter viewport.
-  animation('#shows .list-group-item', 'fade-right');
-  // Animate contact section when it enters the viewport.
-  animation('#contact .container', 'fade-up');
+// Animate cards when they enter viewport.
+animation('.card', 'fade-up');
+// Animate photos when they enter viewport.
+animation('.gallery-image', 'fade-up');
+// Animate show list items when they enter viewport.
+animation('#shows .list-group-item', 'fade-right');
+// Animate contact section when it enters the viewport.
+animation('#contact .container', 'fade-up');
 
 
 // Collect navbar items and down arrow and scroll to corresponding section of the page when clicked
@@ -81,21 +81,21 @@ for (let i = 0; i < navButtons.length; i++) {
 
 // Add navbar logo when you scroll past landing section.
 
- $(window).scroll(function(){
+$(window).scroll(function(){
   if ($(window).scrollTop() > ($('#landing').height() - 100) && $(window).width() > 768) {
     $('#nav-logo').fadeIn();
   } else {
     $('#nav-logo').fadeOut();
   } 
- })
+})
 
 // Hide navbar logo when screen enters medium breakpoint.
 
- $(window).resize(function(){
-   if($(window).width() < 768) {
-    $('#nav-logo').css('display', 'none');
-   }
- })
+$(window).resize(function(){
+  if($(window).width() < 768) {
+  $('#nav-logo').css('display', 'none');
+  }
+})
 
 
 // Email Validation function
